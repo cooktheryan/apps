@@ -9,9 +9,11 @@ metadata:
   name: <cluster-name>
   labels:
     cluster.open-cluster-management.io/clusterset: argocd-managed
+    # Uncomment the following line if you want to enable GitHub auth (via Operate First org) managed by Identitatem
+    # authdeployment: primary
 ```
 
-> Ensure that the <cluster-name> matches that of the `ManagedCluster` resource on live, you can also check for this value
+> Ensure that the `<cluster-name>` matches that of the `ManagedCluster` resource on live, you can also check for this value
 > as it appears on ACM under "Name" when you navigate to Infrastructure > Clusters
 
 Add this file to the `kustomization.yaml` found [here][kustomization].
